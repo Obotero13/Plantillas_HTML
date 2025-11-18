@@ -1,0 +1,83 @@
+/*
+POSITION: 
+por defecto son static
+- static
+- relative
+- absolute
+- fixed
+- sticky
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    /*box-sizing: border-box;*/
+}
+
+.contenedor{
+    margin: 10vh auto;
+    border: 5px dashed orange;
+    width: 350px;
+    /*display: flex;  /* Todos los elementos del contenedor se ponen en fila */
+    /*flex-wrap: wrap; /* Se ajustan los tamaños de los elementos al contendor */
+}
+
+.caja { /* Tamaños en general*/
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: black;
+    font-size: 40px;
+}
+
+.c1{
+    position: relative;
+    background-color: yellow;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 0;
+}
+
+.c2{
+    
+    background-color: blue;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 0;
+}
+
+.c3{
+    
+    background: red;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 0;
+}
+
+.c4{
+    
+    background: green;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 0;
+}
+
+.c5{
+    
+    background: rgb(216, 10, 234);
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 0;
+}
+

@@ -1,0 +1,51 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    width: 400px;
+    height: 600px;
+    border: dashed orange 3px;
+    margin: 30px auto;
+    position:relative;
+}
+
+.fig1, .fig2, .fig3 {
+    width: 400px;
+    height: 200px;
+}
+
+.fig1{
+    background-color: yellow;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 0;
+}
+
+.fig2{
+    background-color: blue;
+    position: relative;
+    top: 100px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 0;
+}
+
+.fig3{
+    background: red;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 0;
+}
+
+
+
+
