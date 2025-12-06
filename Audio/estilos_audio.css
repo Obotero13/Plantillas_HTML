@@ -1,0 +1,58 @@
+.player {
+    width: 340px;
+    margin: 30px auto;
+    background: #1e3a8a; /* azul oscuro */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+  .controls button {
+    background: #3b82f6; /* azul brillante */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .controls button:hover {
+    background: #2563eb; /* azul más intenso */
+  }
+
+  .progress {
+    width: 100%;
+    height: 8px;
+    background: #93c5fd; /* azul claro */
+    border-radius: 5px;
+    margin: 15px 0;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .progress-filled {
+    height: 100%;
+    background: #3b82f6;
+    width: 0%;
+    border-radius: 5px;
+  }
+
+  .time {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .volume-control {
+    margin-top: 10px;
+  }
+
+  .volume-control input[type="range"] {
+    width: 80%;
+    accent-color: #3b82f6; /* color azul para el slider */
+  }
+
+  
