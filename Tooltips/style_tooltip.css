@@ -1,0 +1,109 @@
+/* === TOOLTIP PERSONALIZADO === */
+
+/* Tooltip para la Palabra */
+.tooltip-palabra {
+    position: relative;      /* Necesario para posicionar el tooltip */
+    cursor: help;            /* Muestra cursor de ayuda (?) */
+    color: #0d3b66;        /* Color azul oscuro */
+    border-bottom: 2px dotted #6ca0dc;  /* Línea punteada indicadora */
+    padding: 2px 4px;        /* Espacio interno */
+    border-radius: 3px;      /* Bordes redondeados */
+    background-color: #f8f9fa;  /* Fondo gris claro */
+    transition: all 0.3s ease;  /* Animación suave */
+}
+
+/* Tooltip recuadro flotante */
+.tooltip-texto {
+    visibility: hidden;       /* Oculto por defecto */
+    opacity: 0;               /* Transparente */
+    width: 280px;             /* Ancho fijo */
+    background-color: #0d3b66;  /* Fondo azul oscuro */
+    color: #fff;            /* Texto blanco */
+    text-align: left;         /* Alineación izquierda */
+    border-radius: 8px;       /* Bordes redondeados */
+    padding: 12px 15px;       /* Espacio interno */
+    position: absolute;       /* Posicionamiento absoluto */
+    z-index: 100;             /* Por encima de otros elementos */
+    bottom: 130%;             /* Posición arriba de la palabra */
+    left: 50%;                /* Centrado horizontal */
+    margin-left: -140px;      /* Ajuste de centrado (mitad del ancho) */
+    font-size: 0.85em;        /* Tamaño de fuente menor */
+    line-height: 1.5;         /* Espaciado entre líneas */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);  /* Sombra */
+    transition: opacity 0.3s, visibility 0.3s;  /* Animación */
+}
+
+/* Flecha del Tooltip */
+.tooltip-texto::after {
+    content: '';              /* Elemento vacío */
+    position: absolute;       /* Posición absoluta */
+    top: 100%;                /* Debajo del tooltip */
+    left: 50%;                /* Centrado */
+    margin-left: -8px;        /* Ajuste de centrado */
+    border-width: 8px;        /* Tamaño de la flecha */
+    border-style: solid;      /* Estilo sólido */
+    border-color: #0d3b66 transparent transparent transparent;
+    /* Solo el borde superior tiene color, creando un triángulo */
+}
+
+/* Mostrar tooltip al pasar el cursor */
+.tooltip-palabra:hover .tooltip-texto,
+.tooltip-palabra:focus .tooltip-texto {
+    visibility: visible;      /* Hacerlo visible */
+    opacity: 1;               /* Completamente opaco */
+}
+
+/* Estilos para el número de referencia */
+.nota-numero {
+    display: none;            /* Oculto en pantalla */
+    font-size: 0.75em;        /* Tamaño pequeño */
+    vertical-align: super;    /* Superíndice */
+    color: #c62828;         /* Color rojo */
+    font-weight: bold;        /* Negrita */
+    margin-left: 2px;         /* Pequeño espacio */
+}
+
+/* Glosario oculto en pantalla */
+.notas-al-pie {
+    display: none;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #333;
+}
+
+.notas-al-pie h3 { margin-bottom: 15px; }
+
+.nota-item {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    padding-left: 35px;
+    text-indent: -35px;
+}
+
+.nota-item-numero {
+    font-weight: bold;
+    color: #c62828;
+}
+
+.nota-item-termino {
+    font-weight: bold;
+    color: #0d3b66;
+}
+
+/* === ESTILOS PARA IMPRESIÓN/PDF === */
+@media print {
+    body { font-size: 11pt; line-height: 1.5; padding: 0; }
+    .tooltip-texto { display: none !important; }
+    .tooltip-palabra {
+        border-bottom: none;
+        background-color: transparent;
+        cursor: default;
+        color: inherit;
+        padding: 0;
+    }
+    .nota-numero { display: inline !important; }
+    .notas-al-pie {
+        display: block !important;
+        page-break-inside: avoid;
+    }
+}
