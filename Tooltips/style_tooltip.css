@@ -8,7 +8,7 @@
     border-bottom: 2px dotted #6ca0dc;  /* Línea punteada indicadora */
     padding: 2px 4px;        /* Espacio interno */
     border-radius: 3px;      /* Bordes redondeados */
-    background-color: #f8f9fa;  /* Fondo gris claro */
+    background-color: #ddebf8;  /* Fondo gris claro */
     transition: all 0.3s ease;  /* Animación suave */
 }
 
@@ -16,17 +16,17 @@
 .tooltip-texto {
     visibility: hidden;       /* Oculto por defecto */
     opacity: 0;               /* Transparente */
-    width: 280px;             /* Ancho fijo */
-    background-color: #0d3b66;  /* Fondo azul oscuro */
+    width: 200px;             /* Ancho fijo */
+    background-color: #0d664b;  /* Fondo verde */
     color: #fff;            /* Texto blanco */
     text-align: left;         /* Alineación izquierda */
     border-radius: 8px;       /* Bordes redondeados */
-    padding: 12px 15px;       /* Espacio interno */
+    padding: 10px 10px;       /* Espacio interno */
     position: absolute;       /* Posicionamiento absoluto */
     z-index: 100;             /* Por encima de otros elementos */
     bottom: 130%;             /* Posición arriba de la palabra */
     left: 50%;                /* Centrado horizontal */
-    margin-left: -140px;      /* Ajuste de centrado (mitad del ancho) */
+    margin-left: -50px;       /* Ajuste de centrado (mitad del ancho) */
     font-size: 0.85em;        /* Tamaño de fuente menor */
     line-height: 1.5;         /* Espaciado entre líneas */
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);  /* Sombra */
